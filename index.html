@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>trello cycle time</title>
+	<link href="style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+  <h1>Trello Cycle Times</h1>
+	<div id="trelloinputs">
+    Trello JSON export (whole board):<br/>
+    <textarea id="trelloJson" rows="5" cols="80"></textarea><br/><br/>
+    Between list names: <strong>Start</strong> <input id="startList" type="text" value="Iteration 1 Backlog"></input>
+    &amp; <strong>End</strong> <input id="endList" type="text" value="Done"></input><br/><br/>
+    <button onClick="calc()">Calculate Cycle Times</button><br/><br/>
+	</div>
+  <div id="outputs">
+  </div>
+  <div id="notes" style="width:400px">
+    <p>Notes:</p>
+    <ul>
+      <li>If list names have changed, cards leaving/arriving the old list name won't be included (future feature).</li>
+      <li>You can use same list name for start &amp; end. Using the same name calculates the time spent in just that list.</li>
+      <li>Open cards haven't reached the end list (where the names are different), or haven't left the list (where the names are the same). The cycle time for open cards is calculated up to today.</li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

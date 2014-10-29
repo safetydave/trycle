@@ -1,0 +1,17 @@
+body {
+  background: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:12px;
+}
+
+text {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:10px;
+  color: black;
+}
+
+div#chart {
+  border:1px solid #222;
+  width:960px;
+  margin: 0px auto;
+}
